@@ -68,7 +68,6 @@ main {
   background-color: #ffffff;
   border-radius: 20px;
   gap: 24px;
-  box-shadow: ;
   padding: 0;
   margin: auto; 
   text-align: left;
@@ -79,7 +78,6 @@ main {
 .image {
   width: 336px;
   height: 200px;
-  /*background-image: url('/home/andre/Documents/FrontEndMentor/blog-preview-card/images/illustration-article.svg');*/ 
   background-image: url('../images/illustration-article.svg');
   background-size: contain;
   background-position: center;
@@ -87,6 +85,10 @@ main {
   border-radius: 10px;
   margin: 0 auto;
   padding: 24px auto;
+  transition: all 0.3s ease; /* smooth transition on hover expand */
+}
+.image:hover {
+  opacity: 0.8;
 }
 
 .content {
@@ -127,15 +129,23 @@ main {
 
 }
 
-.heading {
-
+.heading
 }
 */
+a:link,
+a:visited {
+  color: #111111;
+  text-decoration: none;
+}
+a.heading:hover {
+  color: #f4d04e;
+}
+.button:hover {
+  opacity: 0.8;
+}
 .excerpt {
   text-align: left;
 }
-
-
 .author {
   width: 129px;
   height: 32px;
@@ -155,10 +165,12 @@ main {
   max-height: 100%;
   object-fit: contain;
 }
+a.profile-pic:hover {
+  opacity: 0.7;
+}
 .name {
   margin: 0 4px;
 }
-
 .attribution { 
   font-size: 11px; 
   display: flex;
@@ -170,3 +182,21 @@ main {
   justify-content: center;
   text-align: center;
 }
+
+/* NOTES FOR FUTURE REFERENCE:
+
+- to more easily make image links animated:
+
+  place the "image" class inside another div.
+  give the div a fixed name like "image-frame" or similar.
+
+  this way the "image" class can be shrunken or expanded 
+  without shifting/altering neighboring components.
+
+  do this for the COVER IMAGE and authot PROFILE PIC.
+  
+
+  - attach the "profile-pic" class to the "image" class too.
+
+    place it inside another "image-frame" div.
+    
