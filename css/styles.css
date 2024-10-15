@@ -79,7 +79,11 @@ main {
 .image {
   width: 336px;
   height: 200px;
-  background-image: url('/home/andre/Documents/FrontEndMentor/blog-preview-card/images/illustration-article.svg'); 
+  /*background-image: url('/home/andre/Documents/FrontEndMentor/blog-preview-card/images/illustration-article.svg');*/ 
+  background-image: url('../images/illustration-article.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 10px;
   margin: 0 auto;
   padding: 24px auto;
